@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Facebook Minus",
+    "version": "0.1",
+    "description": "No suggested Posts / Infinite scroll",
+    "icons": {
+      "128": "images/logo.png"
+    },
+  
+    "host_permissions": [
+      "https://www.facebook.com/*"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://*.facebook.com/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
